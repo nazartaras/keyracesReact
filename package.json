@@ -9,7 +9,7 @@
     "build": "webpack --mode production",
     "start":"node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
