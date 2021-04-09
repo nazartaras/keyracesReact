@@ -13,7 +13,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
   template: resolveAppPath("./src/index.html"),
 });
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "build"),
     publicPath: "/",
@@ -23,8 +23,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
-        loader: "awesome-typescript-loader",
+        test: /\.tsx?$/,
+        loader: "ts-loader",
+        exclude: /(node_modules(?!\/striptags)|bower_components)/,
       },
       {
         enforce: "pre",

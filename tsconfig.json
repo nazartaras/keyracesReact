@@ -1,21 +1,12 @@
 {
-	"compilerOptions": {
-		"target": "es5",
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"module": "esnext",
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"noEmit": true,
-		"jsx": "preserve",
-		"isolatedModules": true,
-		"downlevelIteration": true,
-		"noImplicitAny": false
-	},
-	"include": ["src"]
+    "extends": "@tsconfig/recommended/tsconfig.json",
+    "compilerOptions": {
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "rootDirs": ["src"],
+        "baseUrl": "./src",
+        "typeRoots": ["./src/types/", "node", "node_modules/@types/"],
+        "lib": ["ESNext", "DOM", "webworker"]
+    }
 }
